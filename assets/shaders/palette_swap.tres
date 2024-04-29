@@ -1,0 +1,25 @@
+[gd_resource type="Shader" format=3 uid="uid://cd6g62u2tvfx8"]
+
+[resource]
+code = "shader_type canvas_item;
+
+uniform vec4 color[10]: source_color;
+uniform vec4 color_to[10]: source_color;
+uniform float intensity;
+
+void fragment() {
+	vec4 new_color;
+	new_color.a = 0.0;
+	vec4 base_color = texture(SCREEN_TEXTURE, SCREEN_UV);
+	for (int i = 0; i < 100; i++)
+	{
+		if (i < color.length())
+		{
+			if (base_color == color[i])
+			{
+				new_color = vec4(color_to[i].r, color_to[i].g, color_to[i].b, color_to[i].a * base_color.a);
+			}
+		}
+	}
+	COLOR = new_color;
+}"

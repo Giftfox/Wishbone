@@ -1,0 +1,62 @@
+[gd_scene load_steps=8 format=3 uid="uid://btc07f1lte0ms"]
+
+[ext_resource type="Script" path="res://src/entities/entity.gd" id="1_nnrrp"]
+[ext_resource type="Script" path="res://src/entities/components/movement.gd" id="2_k8k5v"]
+[ext_resource type="SpriteFrames" uid="uid://d1cweg75l681v" path="res://src/entities/individuals/frames/althar_fan.tres" id="3_5bgb8"]
+[ext_resource type="Script" path="res://src/entities/components/entity_animations.gd" id="3_m1usy"]
+[ext_resource type="Script" path="res://src/entities/components/npc_AI.gd" id="5_kpwa4"]
+[ext_resource type="Script" path="res://src/entities/components/camera.gd" id="6_3bitv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yvq7h"]
+size = Vector2(32, 61)
+
+[node name="Entity" type="CharacterBody2D" groups=["entity"]]
+z_index = 50
+collision_layer = 4
+collision_mask = 3
+floor_constant_speed = true
+floor_snap_length = 4.0
+script = ExtResource("1_nnrrp")
+
+[node name="Movement" type="Node2D" parent="."]
+script = ExtResource("2_k8k5v")
+
+[node name="EffectCooldown" type="Timer" parent="Movement"]
+process_callback = 0
+wait_time = 0.25
+one_shot = true
+
+[node name="Visuals" type="Node2D" parent="."]
+
+[node name="Anims" type="AnimatedSprite2D" parent="Visuals"]
+position = Vector2(0, -40)
+sprite_frames = ExtResource("3_5bgb8")
+animation = &"idle_right"
+autoplay = "idle_right"
+script = ExtResource("3_m1usy")
+
+[node name="Coll" type="CollisionShape2D" parent="."]
+position = Vector2(0, -30.5)
+shape = SubResource("RectangleShape2D_yvq7h")
+
+[node name="AI" type="Area2D" parent="."]
+script = ExtResource("5_kpwa4")
+
+[node name="Coll" type="CollisionShape2D" parent="AI"]
+
+[node name="Delay" type="Timer" parent="AI"]
+process_callback = 0
+one_shot = true
+autostart = true
+
+[node name="Camera" type="Node2D" parent="."]
+script = ExtResource("6_3bitv")
+platforming_movement = true
+
+[node name="Shake" type="Timer" parent="Camera"]
+process_callback = 0
+one_shot = true
+
+[connection signal="facing_changed" from="Movement" to="Visuals/Anims" method="_on_movement_facing_changed"]
+[connection signal="movement_state_changed" from="Movement" to="Visuals/Anims" method="_on_movement_state_changed"]
+[connection signal="timeout" from="Camera/Shake" to="Camera" method="_on_shake_timeout"]

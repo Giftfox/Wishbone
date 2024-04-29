@@ -1,0 +1,78 @@
+[gd_resource type="SpriteFrames" load_steps=8 format=3 uid="uid://cd8l5j6hptvk4"]
+
+[ext_resource type="Texture2D" uid="uid://ccjpk5x0yu436" path="res://assets/entities/individuals/althargoatato.png" id="1_yl1is"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6m16o"]
+atlas = ExtResource("1_yl1is")
+region = Rect2(0, 0, 117, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fkfqa"]
+atlas = ExtResource("1_yl1is")
+region = Rect2(117, 0, 117, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tghq0"]
+atlas = ExtResource("1_yl1is")
+region = Rect2(0, 0, 117, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wg4j5"]
+atlas = ExtResource("1_yl1is")
+region = Rect2(117, 0, 117, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lmn67"]
+atlas = ExtResource("1_yl1is")
+region = Rect2(234, 0, 117, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yfix6"]
+atlas = ExtResource("1_yl1is")
+region = Rect2(351, 0, 117, 69)
+
+[resource]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"idle_left",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6m16o")
+}],
+"loop": true,
+"name": &"idle_right",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"jump_left",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fkfqa")
+}],
+"loop": true,
+"name": &"jump_right",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"walk_left",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tghq0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wg4j5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lmn67")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yfix6")
+}],
+"loop": true,
+"name": &"walk_right",
+"speed": 10.0
+}]

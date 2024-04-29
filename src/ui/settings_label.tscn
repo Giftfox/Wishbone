@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://bc2c2inuks5it"]
+
+[ext_resource type="PackedScene" uid="uid://daao0nrsyylem" path="res://src/ui/rectangle_visual.tscn" id="2_oyvw7"]
+[ext_resource type="FontFile" uid="uid://mi24hkcfihxa" path="res://assets/fonts/Small.tres" id="3_ugfel"]
+
+[node name="SettingsLabel" type="Label"]
+offset_left = 45.0
+offset_top = 30.0
+offset_right = 445.0
+offset_bottom = 110.0
+theme_override_font_sizes/font_size = 64
+text = "Master   Volume"
+vertical_alignment = 1
+
+[node name="Rectangle" parent="." instance=ExtResource("2_oyvw7")]
+position = Vector2(-20, 43)
+size = Vector2(380, 80)
+thickness = 2
+vertical_centered = true
+
+[node name="Setting" type="Label" parent="."]
+layout_mode = 0
+offset_left = 315.0
+offset_top = 18.0
+offset_right = 715.0
+offset_bottom = 72.0
+theme_override_fonts/font = ExtResource("3_ugfel")
+theme_override_font_sizes/font_size = 64
+text = "< 100 >"
+horizontal_alignment = 1

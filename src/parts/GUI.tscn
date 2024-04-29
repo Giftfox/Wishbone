@@ -1,0 +1,232 @@
+[gd_scene load_steps=23 format=3 uid="uid://cixg237lvevun"]
+
+[ext_resource type="Script" path="res://src/parts/HUD.gd" id="1_3pd02"]
+[ext_resource type="Script" path="res://src/parts/GuiSFX.gd" id="2_b7use"]
+[ext_resource type="Texture2D" uid="uid://3e7s4s3538er" path="res://assets/ui/hud/saveicon.png" id="3_4y7r1"]
+[ext_resource type="PackedScene" uid="uid://b7ovt0s0r45pg" path="res://src/parts/ModularBox.tscn" id="4_7kns1"]
+[ext_resource type="Script" path="res://src/parts/DialogueBox.gd" id="5_sypep"]
+[ext_resource type="AudioStream" uid="uid://b6v70mkm4gj22" path="res://assets/sounds/sfx/dialogue_blip.wav" id="6_rtnjp"]
+[ext_resource type="PackedScene" uid="uid://butynrew6ycx7" path="res://src/parts/ShadedLabel.tscn" id="7_j2hgh"]
+[ext_resource type="Texture2D" uid="uid://52br5eq5x88l" path="res://assets/ui/screen_dither.png" id="9_x14l4"]
+[ext_resource type="Texture2D" uid="uid://cppggxfeo6ewv" path="res://assets/ui/box/mouse_click.png" id="10_18vmy"]
+
+[sub_resource type="AtlasTexture" id="1"]
+atlas = ExtResource("3_4y7r1")
+region = Rect2(0, 0, 16, 18)
+
+[sub_resource type="AtlasTexture" id="2"]
+atlas = ExtResource("3_4y7r1")
+region = Rect2(16, 0, 16, 18)
+
+[sub_resource type="SpriteFrames" id="3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("1")
+}, {
+"duration": 1.0,
+"texture": SubResource("2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="Animation" id="4"]
+resource_name = "appear"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 2.2, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bh2p6"]
+_data = {
+"appear": SubResource("4")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uat6c"]
+atlas = ExtResource("10_18vmy")
+region = Rect2(0, 0, 15, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g8a31"]
+atlas = ExtResource("10_18vmy")
+region = Rect2(15, 0, 15, 30)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_aa5qt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uat6c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g8a31")
+}],
+"loop": true,
+"name": &"leftclick",
+"speed": 3.0
+}]
+
+[sub_resource type="Animation" id="10"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [5]
+}
+
+[sub_resource type="Animation" id="7"]
+length = 0.8
+step = 0.08
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.48, 0.56, 0.64, 0.72, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [5, 5, 4, 3, 2, 1, 0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_431me"]
+_data = {
+"RESET": SubResource("10"),
+"unfade": SubResource("7")
+}
+
+[sub_resource type="Animation" id="9"]
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cds3d"]
+_data = {
+"unfade": SubResource("9")
+}
+
+[node name="GUI" type="Node2D" groups=["no_destroy"]]
+process_mode = 3
+process_priority = 1
+z_index = 900
+script = ExtResource("1_3pd02")
+
+[node name="SFX" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
+script = ExtResource("2_b7use")
+
+[node name="HUD" type="Node2D" parent="."]
+process_mode = 3
+z_index = -20
+
+[node name="SaveIcon" type="AnimatedSprite2D" parent="HUD"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(610, 450)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="HUD/SaveIcon"]
+libraries = {
+"": SubResource("AnimationLibrary_bh2p6")
+}
+
+[node name="DialogueBox" parent="HUD" instance=ExtResource("4_7kns1")]
+visible = false
+position = Vector2(162, 260)
+script = ExtResource("5_sypep")
+size = Vector2(314, 98)
+
+[node name="LabelShadow" type="Label" parent="HUD/DialogueBox"]
+visible = false
+modulate = Color(0, 0, 0, 1)
+offset_left = 26.0
+offset_top = 9.0
+offset_right = 332.0
+offset_bottom = 99.0
+text = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+autowrap_mode = 2
+
+[node name="Label" type="Label" parent="HUD/DialogueBox"]
+offset_left = 12.0
+offset_top = 8.0
+offset_right = 306.0
+offset_bottom = 98.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 19
+text = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+autowrap_mode = 2
+
+[node name="SFX" type="AudioStreamPlayer" parent="HUD/DialogueBox"]
+stream = ExtResource("6_rtnjp")
+bus = &"SFX"
+
+[node name="Icon" type="AnimatedSprite2D" parent="HUD/DialogueBox"]
+visible = false
+position = Vector2(286, 60)
+sprite_frames = SubResource("SpriteFrames_aa5qt")
+animation = &"leftclick"
+centered = false
+
+[node name="FPS" parent="HUD" instance=ExtResource("7_j2hgh")]
+position = Vector2(5, 344)
+text = "60"
+align_left = true
+
+[node name="ScreenFade" type="Sprite2D" parent="."]
+visible = false
+z_index = 100
+texture = ExtResource("9_x14l4")
+centered = false
+hframes = 2
+vframes = 3
+frame = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ScreenFade"]
+playback_process_mode = 0
+libraries = {
+"": SubResource("AnimationLibrary_431me")
+}
+
+[node name="ScreenFade2" type="ColorRect" parent="."]
+visible = false
+offset_right = 1000.0
+offset_bottom = 1000.0
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ScreenFade2"]
+playback_process_mode = 0
+libraries = {
+"": SubResource("AnimationLibrary_cds3d")
+}

@@ -1,0 +1,201 @@
+[gd_scene load_steps=16 format=3 uid="uid://clr6qswiiwd45"]
+
+[ext_resource type="PackedScene" uid="uid://cixg237lvevun" path="res://src/parts/GUI.tscn" id="3_5m0ar"]
+[ext_resource type="PackedScene" uid="uid://tqtkvrgiete3" path="res://src/rooms/misc/Title.tscn" id="4_8o8k2"]
+[ext_resource type="Script" path="res://src/rooms/GameContainer.gd" id="5"]
+[ext_resource type="Script" path="res://src/parts/weather/nightbugs.gd" id="5_6sup1"]
+[ext_resource type="Script" path="res://src/parts/weather/weather.gd" id="5_q8euf"]
+[ext_resource type="Script" path="res://src/rooms/GameView.gd" id="6"]
+[ext_resource type="PackedScene" uid="uid://8bbri12nttkb" path="res://src/ui/pause_menu.tscn" id="6_b0ao4"]
+[ext_resource type="Script" path="res://src/parts/weather/rain.gd" id="6_m02sn"]
+[ext_resource type="Texture2D" uid="uid://cse643suiw80k" path="res://assets/effects/rain.png" id="7_opmyc"]
+[ext_resource type="Texture2D" uid="uid://bq4r4hjk01i2g" path="res://assets/effects/beam.png" id="8_jnjgn"]
+[ext_resource type="Texture2D" uid="uid://dtttbp6eee4gc" path="res://assets/effects/smallcircle.png" id="9_ys7dm"]
+[ext_resource type="Script" path="res://src/parts/vn/VNHandler.gd" id="10"]
+[ext_resource type="Script" path="res://src/parts/vn/vn_choice_handler.gd" id="11_kgrpc"]
+
+[sub_resource type="Curve" id="Curve_pypjj"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.874346, 0.990909), 0.0, 0.0, 0, 0, Vector2(0.994764, 0.0272727), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_i441d"]
+offsets = PackedFloat32Array(0, 0.43125, 0.5125, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[node name="MainScene" type="Node2D"]
+
+[node name="GUIContainer" type="SubViewportContainer" parent="."]
+process_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 2560.0
+offset_bottom = 1440.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="GUIView" type="SubViewport" parent="GUIContainer"]
+disable_3d = true
+handle_input_locally = false
+snap_2d_transforms_to_pixel = true
+canvas_item_default_texture_filter = 0
+physics_object_picking = true
+size = Vector2i(2560, 1440)
+render_target_update_mode = 4
+
+[node name="GameContainer" type="SubViewportContainer" parent="GUIContainer/GUIView"]
+process_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+stretch = true
+stretch_shrink = 4
+script = ExtResource("5")
+
+[node name="GameView" type="SubViewport" parent="GUIContainer/GUIView/GameContainer"]
+disable_3d = true
+handle_input_locally = false
+snap_2d_transforms_to_pixel = true
+canvas_item_default_texture_filter = 0
+physics_object_picking = true
+size = Vector2i(640, 360)
+render_target_update_mode = 4
+script = ExtResource("6")
+
+[node name="GUI" parent="GUIContainer/GUIView/GameContainer/GameView" instance=ExtResource("3_5m0ar")]
+
+[node name="EventTimer" type="Timer" parent="GUIContainer/GUIView/GameContainer/GameView" groups=["no_destroy"]]
+one_shot = true
+
+[node name="Music" type="AudioStreamPlayer" parent="GUIContainer/GUIView/GameContainer/GameView" groups=["no_destroy"]]
+process_mode = 2
+bus = &"Music"
+
+[node name="Title" parent="GUIContainer/GUIView/GameContainer/GameView" instance=ExtResource("4_8o8k2")]
+
+[node name="Weather" type="Node2D" parent="GUIContainer/GUIView/GameContainer/GameView" groups=["no_destroy"]]
+script = ExtResource("5_q8euf")
+
+[node name="Nightbugs" type="Node2D" parent="GUIContainer/GUIView/GameContainer/GameView/Weather"]
+visible = false
+position = Vector2(320, 180)
+script = ExtResource("5_6sup1")
+
+[node name="Rain" type="Node2D" parent="GUIContainer/GUIView/GameContainer/GameView/Weather"]
+visible = false
+position = Vector2(320, 0)
+script = ExtResource("6_m02sn")
+
+[node name="Back" type="CPUParticles2D" parent="GUIContainer/GUIView/GameContainer/GameView/Weather/Rain"]
+z_index = -200
+amount = 150
+texture = ExtResource("7_opmyc")
+emission_shape = 3
+emission_rect_extents = Vector2(960, 1)
+direction = Vector2(-1, 1)
+spread = 2.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 900.0
+initial_velocity_max = 1000.0
+color = Color(0.431373, 0.682353, 1, 1)
+
+[node name="Front" type="CPUParticles2D" parent="GUIContainer/GUIView/GameContainer/GameView/Weather/Rain"]
+z_index = 500
+amount = 150
+texture = ExtResource("7_opmyc")
+emission_shape = 3
+emission_rect_extents = Vector2(960, 1)
+direction = Vector2(-1, 1)
+spread = 2.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 900.0
+initial_velocity_max = 1000.0
+
+[node name="Snow" type="Node2D" parent="GUIContainer/GUIView/GameContainer/GameView/Weather"]
+visible = false
+position = Vector2(320, 0)
+script = ExtResource("6_m02sn")
+
+[node name="Back" type="CPUParticles2D" parent="GUIContainer/GUIView/GameContainer/GameView/Weather/Snow"]
+z_index = -200
+amount = 50
+lifetime = 3.5
+texture = ExtResource("9_ys7dm")
+emission_shape = 3
+emission_rect_extents = Vector2(960, 1)
+direction = Vector2(0, 1)
+spread = 5.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 50.0
+initial_velocity_max = 100.0
+scale_amount_min = 0.5
+scale_amount_curve = SubResource("Curve_pypjj")
+color = Color(0.713726, 0.839216, 1, 1)
+
+[node name="Front" type="CPUParticles2D" parent="GUIContainer/GUIView/GameContainer/GameView/Weather/Snow"]
+z_index = 500
+amount = 50
+lifetime = 3.5
+texture = ExtResource("9_ys7dm")
+emission_shape = 3
+emission_rect_extents = Vector2(960, 1)
+direction = Vector2(0, 1)
+spread = 5.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 50.0
+initial_velocity_max = 100.0
+scale_amount_min = 0.5
+scale_amount_curve = SubResource("Curve_pypjj")
+
+[node name="Sun" type="Node2D" parent="GUIContainer/GUIView/GameContainer/GameView/Weather"]
+visible = false
+script = ExtResource("6_m02sn")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="GUIContainer/GUIView/GameContainer/GameView/Weather/Sun"]
+modulate = Color(1, 0.988235, 0.780392, 0.278431)
+light_mask = 0
+z_index = 500
+position = Vector2(-100, -100)
+amount = 3
+lifetime = 5.0
+local_coords = true
+texture = ExtResource("8_jnjgn")
+gravity = Vector2(0, 0)
+angle_min = 20.0
+angle_max = 80.0
+color_ramp = SubResource("Gradient_i441d")
+
+[node name="VNHandler" type="Node2D" parent="GUIContainer/GUIView"]
+z_index = 1000
+z_as_relative = false
+script = ExtResource("10")
+
+[node name="Screen" type="ColorRect" parent="GUIContainer/GUIView/VNHandler"]
+modulate = Color(0, 0, 0, 0)
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 2700.0
+offset_bottom = 1900.0
+
+[node name="Illustration" type="Node2D" parent="GUIContainer/GUIView/VNHandler"]
+
+[node name="Portraits" type="Node2D" parent="GUIContainer/GUIView/VNHandler"]
+z_index = 50
+
+[node name="Choices" type="Node2D" parent="GUIContainer/GUIView/VNHandler"]
+modulate = Color(1, 1, 1, 0)
+z_index = 100
+script = ExtResource("11_kgrpc")
+
+[node name="Screen" type="ColorRect" parent="GUIContainer/GUIView/VNHandler/Choices"]
+modulate = Color(0, 0, 0, 0.501961)
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 2700.0
+offset_bottom = 1900.0
+
+[node name="PauseMenu" parent="GUIContainer/GUIView" instance=ExtResource("6_b0ao4")]

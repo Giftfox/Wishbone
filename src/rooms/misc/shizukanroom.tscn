@@ -1,0 +1,101 @@
+[gd_scene load_steps=7 format=3 uid="uid://dvp4fveheshyk"]
+
+[ext_resource type="PackedScene" uid="uid://dmtpsacm6elog" path="res://src/rooms/RoomControl.tscn" id="1_kgen5"]
+[ext_resource type="PackedScene" uid="uid://u40u2roi0pjx" path="res://src/entities/player.tscn" id="2_s75w1"]
+[ext_resource type="TileSet" uid="uid://cclm5i2mu73mh" path="res://assets/environments/testing.tres" id="5_20vbi"]
+[ext_resource type="Texture2D" uid="uid://cjvr060shddc3" path="res://assets/environments/shizukan_room.png" id="5_50pvy"]
+[ext_resource type="PackedScene" uid="uid://l4vga2oj5kdj" path="res://src/parts/event/warp_point.tscn" id="6_tiw7v"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_iy24v"]
+
+[node name="ShizukanRoom" type="Node2D"]
+process_mode = 1
+material = SubResource("ShaderMaterial_iy24v")
+
+[node name="RoomControl" parent="." instance=ExtResource("1_kgen5")]
+uses_camera = false
+scene_path = "misc/shizukanroom"
+
+[node name="Background" type="ColorRect" parent="."]
+visible = false
+z_index = -500
+use_parent_material = true
+offset_left = -32.0
+offset_top = -17.0
+offset_right = 3608.0
+offset_bottom = 808.0
+mouse_filter = 2
+color = Color(0.364706, 0.435294, 0.898039, 1)
+
+[node name="Player" parent="." instance=ExtResource("2_s75w1")]
+position = Vector2(394, 240)
+
+[node name="TileMap" type="TileMap" parent="."]
+visible = false
+position = Vector2(0, 192)
+tile_set = ExtResource("5_20vbi")
+format = 2
+layer_0/name = "Background"
+layer_0/z_index = -100
+layer_1/name = "GroundBehind"
+layer_1/enabled = true
+layer_1/modulate = Color(1, 1, 1, 1)
+layer_1/y_sort_enabled = false
+layer_1/y_sort_origin = 0
+layer_1/z_index = 0
+layer_1/tile_data = PackedInt32Array()
+layer_2/name = "Ground"
+layer_2/enabled = true
+layer_2/modulate = Color(1, 1, 1, 1)
+layer_2/y_sort_enabled = false
+layer_2/y_sort_origin = 0
+layer_2/z_index = 100
+layer_2/tile_data = PackedInt32Array(196620, 65536, 2, 196621, 65536, 2, 196622, 65536, 2, 196623, 65536, 2, 196624, 65536, 2, 196625, 65536, 2, 196626, 65536, 2, 196627, 65536, 2, 196628, 65536, 2, 262165, 65536, 2, 262166, 65536, 2, 262167, 65536, 2, 262168, 65536, 2, 196632, 65536, 2, 196633, 65536, 2, 196631, 65536, 2, 196630, 65536, 2, 196629, 65536, 2, 196634, 65536, 2, 196635, 65536, 2, 262171, 65536, 2, 262170, 65536, 2, 262169, 65536, 2, 262172, 65536, 2, 196636, 65536, 2, 131100, 65536, 2, 65564, 65536, 2, 28, 65536, 2, -65508, 65536, 2, -131044, 65536, 2, -196580, 65536, 2, -262116, 65536, 2, -327652, 65536, 2, -393188, 65536, 2, -458724, 65536, 2, -458723, 65536, 2, -393187, 65536, 2, -327651, 65536, 2, -262115, 65536, 2, -196579, 65536, 2, -131043, 65536, 2, -65507, 65536, 2, 29, 65536, 2, 65565, 65536, 2, 131101, 65536, 2, 196637, 65536, 2, 262173, 65536, 2, 262164, 65536, 2, 262163, 65536, 2, 262162, 65536, 2, 262161, 65536, 2, 262160, 65536, 2, 262159, 65536, 2, 262158, 65536, 2, 262157, 65536, 2, 262156, 65536, 2, 196619, 65536, 2, 196618, 65536, 2, 262154, 65536, 2, 262155, 65536, 2, 131083, 65536, 2, 65547, 65536, 2, 11, 65536, 2, -65525, 65536, 2, -131061, 65536, 2, -196597, 65536, 2, -262133, 65536, 2, -327669, 65536, 2, -393205, 65536, 2, -458741, 65536, 2, -524277, 65536, 2, -524278, 65536, 2, -458742, 65536, 2, -393206, 65536, 2, -327670, 65536, 2, -262134, 65536, 2, -196598, 65536, 2, -131062, 65536, 2, -65526, 65536, 2, 10, 65536, 2, 65546, 65536, 2, 131082, 65536, 2, -589814, 65536, 2, -589813, 65536, 2, -589812, 65536, 2, -589811, 65536, 2, -589810, 65536, 2, -589809, 65536, 2, -589808, 65536, 2, -589807, 65536, 2, -589806, 65536, 2, -589805, 65536, 2, -589804, 65536, 2, -589803, 65536, 2, -589802, 65536, 2, -524265, 65536, 2, -589801, 65536, 2, -524266, 65536, 2, -524267, 65536, 2, -524268, 65536, 2, -524269, 65536, 2, -524270, 65536, 2, -524271, 65536, 2, -524272, 65536, 2, -524273, 65536, 2, -524274, 65536, 2, -524275, 65536, 2, -524276, 65536, 2, -524260, 65536, 2, -524259, 65536, 2, -524261, 65536, 2, -524262, 65536, 2, -589798, 65536, 2, -589797, 65536, 2, -589796, 65536, 2, -589795, 65536, 2, 12, 65536, 2, 13, 65536, 2, 14, 65536, 2, 15, 65536, 6, 65553, 65536, 2, 65554, 65536, 6, 131092, 65536, 2, 131093, 65536, 6, 131091, 65536, 2, 131090, 65536, 2, 131089, 65536, 2, 131088, 65536, 2, 131087, 65536, 2, 131086, 65536, 2, 131085, 65536, 2, 131084, 65536, 2, 65548, 65536, 2, 65549, 65536, 2, 65550, 65536, 2, 65551, 65536, 2, 65552, 65536, 2)
+layer_3/name = "Foreground"
+layer_3/enabled = true
+layer_3/modulate = Color(1, 1, 1, 1)
+layer_3/y_sort_enabled = false
+layer_3/y_sort_origin = 0
+layer_3/z_index = 200
+layer_3/tile_data = PackedInt32Array()
+
+[node name="WarpPoint" parent="." instance=ExtResource("6_tiw7v")]
+position = Vector2(394, 240)
+is_exit = false
+move_after_entering = false
+linked_map = "misc/hub"
+linked_entrance = "from_shizukan"
+entrance_name = "from_hub"
+
+[node name="ColorRect" type="ColorRect" parent="WarpPoint"]
+visible = false
+offset_left = -16.0
+offset_top = -35.0
+offset_right = 16.0
+offset_bottom = 29.0
+color = Color(0, 0, 0, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("5_50pvy")
+centered = false
+vframes = 4
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+texture = ExtResource("5_50pvy")
+centered = false
+vframes = 4
+frame = 2
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+z_index = 100
+texture = ExtResource("5_50pvy")
+centered = false
+vframes = 4
+frame = 3
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+z_index = 100
+texture = ExtResource("5_50pvy")
+centered = false
+vframes = 4
+frame = 1

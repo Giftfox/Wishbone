@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://src/parts/vn/VNPortrait.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/ui/vn/portraits/beleth/bel_cross_mouth2.png" type="Texture2D" id=2]
+[ext_resource path="res://assets/ui/vn/portraits/beleth/bel_cross_mouth1.png" type="Texture2D" id=3]
+[ext_resource path="res://assets/ui/vn/portraits/beleth/bel_cross_eyes1.png" type="Texture2D" id=4]
+[ext_resource path="res://assets/ui/vn/portraits/beleth/bel_cross_eyes2.png" type="Texture2D" id=5]
+
+[node name="VNPortrait" instance=ExtResource( 1 )]
+default_variants = [ "0" ]
+
+[node name="0" type="Sprite2D" parent="Portrait/Mouth" index="0"]
+visible = false
+texture = ExtResource( 3 )
+
+[node name="1" type="Sprite2D" parent="Portrait/Mouth" index="1"]
+visible = false
+texture = ExtResource( 2 )
+
+[node name="0" type="Sprite2D" parent="Portrait/Variants" index="0"]
+position = Vector2( 36, -76 )
+texture = ExtResource( 4 )
+
+[node name="1" type="Sprite2D" parent="Portrait/Variants" index="1"]
+visible = false
+position = Vector2( 36, -76 )
+texture = ExtResource( 5 )

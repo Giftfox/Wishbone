@@ -1,0 +1,58 @@
+[gd_resource type="SpriteFrames" load_steps=8 format=3 uid="uid://bq5du2n50s5bo"]
+
+[ext_resource type="Texture2D" uid="uid://dkkj86dnjnimw" path="res://assets/ui/vn/portraits/nyaofa/nyaofatalky.png" id="1_o8upj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s55t1"]
+atlas = ExtResource("1_o8upj")
+region = Rect2(0, 96, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yxadl"]
+atlas = ExtResource("1_o8upj")
+region = Rect2(96, 96, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m8mcu"]
+atlas = ExtResource("1_o8upj")
+region = Rect2(192, 96, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o778e"]
+atlas = ExtResource("1_o8upj")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tm7ss"]
+atlas = ExtResource("1_o8upj")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t7p3y"]
+atlas = ExtResource("1_o8upj")
+region = Rect2(192, 0, 96, 96)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s55t1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yxadl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m8mcu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o778e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tm7ss")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t7p3y")
+}],
+"loop": true,
+"name": &"talky",
+"speed": 12.0
+}]

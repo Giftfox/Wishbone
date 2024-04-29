@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqcum8t0hlh48"]
+
+[ext_resource type="Script" path="res://src/parts/vn/portrait_animated_variant.gd" id="1_r6faw"]
+
+[node name="AnimVariant" type="AnimatedSprite2D"]
+script = ExtResource("1_r6faw")
+blink_timer_range = Vector2(0.25, 5)
+
+[node name="Timer" type="Timer" parent="."]
+process_callback = 0
+wait_time = 0.25
+one_shot = true
+autostart = true
+
+[connection signal="animation_finished" from="." to="." method="_on_animation_finished"]
+[connection signal="animation_looped" from="." to="." method="_on_animation_looped"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

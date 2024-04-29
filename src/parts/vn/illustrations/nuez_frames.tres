@@ -1,0 +1,816 @@
+[gd_resource type="SpriteFrames" load_steps=125 format=3 uid="uid://c0544hj5483db"]
+
+[ext_resource type="Texture2D" uid="uid://l57dyyaqfsyy" path="res://assets/ui/vn/illustrations/nuez/nuez scene1.png" id="1_rwhfq"]
+[ext_resource type="Texture2D" uid="uid://dcvp7mgqwa40" path="res://assets/ui/vn/illustrations/nuez/nuez scene10.png" id="2_7xyvh"]
+[ext_resource type="Texture2D" uid="uid://bvi2gff5niotb" path="res://assets/ui/vn/illustrations/nuez/nuez scene11.png" id="3_xpuoy"]
+[ext_resource type="Texture2D" uid="uid://dik041mvajo5e" path="res://assets/ui/vn/illustrations/nuez/nuez scene11a.png" id="4_cbw1a"]
+[ext_resource type="Texture2D" uid="uid://8kaocqq6vol3" path="res://assets/ui/vn/illustrations/nuez/nuez scene11b.png" id="5_m4sam"]
+[ext_resource type="Texture2D" uid="uid://cqtpta2qm1aja" path="res://assets/ui/vn/illustrations/nuez/nuez scene12.png" id="6_qxs6c"]
+[ext_resource type="Texture2D" uid="uid://cuulrqa4pjxr0" path="res://assets/ui/vn/illustrations/nuez/nuez scene13.png" id="7_6e4y4"]
+[ext_resource type="Texture2D" uid="uid://butfsjfq4ugpd" path="res://assets/ui/vn/illustrations/nuez/nuez scene14.png" id="8_e5cle"]
+[ext_resource type="Texture2D" uid="uid://dciabn3tagv2w" path="res://assets/ui/vn/illustrations/nuez/nuez scene15.png" id="9_eb5ay"]
+[ext_resource type="Texture2D" uid="uid://m0xixlgqxyej" path="res://assets/ui/vn/illustrations/nuez/nuez scene16.png" id="10_ff251"]
+[ext_resource type="Texture2D" uid="uid://cbks1gvyhjtw1" path="res://assets/ui/vn/illustrations/nuez/nuez scene16a.png" id="11_ykm0q"]
+[ext_resource type="Texture2D" uid="uid://dmhec0kuppmxr" path="res://assets/ui/vn/illustrations/nuez/nuez scene17.png" id="12_masxf"]
+[ext_resource type="Texture2D" uid="uid://dgge6s5pd8is" path="res://assets/ui/vn/illustrations/nuez/nuez scene17b.png" id="13_4krpa"]
+[ext_resource type="Texture2D" uid="uid://brkqbdhsppq1m" path="res://assets/ui/vn/illustrations/nuez/nuez scene18.png" id="14_4bpph"]
+[ext_resource type="Texture2D" uid="uid://di7juw83t0oel" path="res://assets/ui/vn/illustrations/nuez/nuez scene18a.png" id="15_px1td"]
+[ext_resource type="Texture2D" uid="uid://sfjia2b8deng" path="res://assets/ui/vn/illustrations/nuez/nuez scene19.png" id="16_urnn6"]
+[ext_resource type="Texture2D" uid="uid://cory2r8gd2je4" path="res://assets/ui/vn/illustrations/nuez/nuez scene2.png" id="17_rfsa5"]
+[ext_resource type="Texture2D" uid="uid://cc7f17jadkxhk" path="res://assets/ui/vn/illustrations/nuez/nuez scene20.png" id="18_mbx45"]
+[ext_resource type="Texture2D" uid="uid://bx5it8d5qk5xx" path="res://assets/ui/vn/illustrations/nuez/nuez scene21.png" id="19_nrksx"]
+[ext_resource type="Texture2D" uid="uid://mfy5b3vaykg6" path="res://assets/ui/vn/illustrations/nuez/nuez scene22.png" id="20_ljlj5"]
+[ext_resource type="Texture2D" uid="uid://pagwin75ihcf" path="res://assets/ui/vn/illustrations/nuez/nuez scene23.png" id="21_l8vfb"]
+[ext_resource type="Texture2D" uid="uid://gj5m0h77rsgd" path="res://assets/ui/vn/illustrations/nuez/nuez scene24.png" id="22_4knrl"]
+[ext_resource type="Texture2D" uid="uid://bdgv0iofujco0" path="res://assets/ui/vn/illustrations/nuez/nuez scene25.png" id="23_e3k6f"]
+[ext_resource type="Texture2D" uid="uid://16h7wcaiaywk" path="res://assets/ui/vn/illustrations/nuez/nuez scene26.png" id="24_3bbv4"]
+[ext_resource type="Texture2D" uid="uid://d2x0v6tpfiqxd" path="res://assets/ui/vn/illustrations/nuez/nuez scene26a.png" id="25_eeojs"]
+[ext_resource type="Texture2D" uid="uid://cjqamavcus5dl" path="res://assets/ui/vn/illustrations/nuez/nuez scene27.png" id="26_hi7ai"]
+[ext_resource type="Texture2D" uid="uid://dapkdwe22uyou" path="res://assets/ui/vn/illustrations/nuez/nuez scene28.png" id="27_g0nv3"]
+[ext_resource type="Texture2D" uid="uid://by4srr6gjrige" path="res://assets/ui/vn/illustrations/nuez/nuez scene29.png" id="28_mchv7"]
+[ext_resource type="Texture2D" uid="uid://cffkbentd0bu6" path="res://assets/ui/vn/illustrations/nuez/nuez scene3.png" id="29_i74dj"]
+[ext_resource type="Texture2D" uid="uid://dhev871h5g16j" path="res://assets/ui/vn/illustrations/nuez/nuez scene30.png" id="30_hkrnv"]
+[ext_resource type="Texture2D" uid="uid://w570ldbic2o7" path="res://assets/ui/vn/illustrations/nuez/nuez scene31.png" id="31_geur4"]
+[ext_resource type="Texture2D" uid="uid://tjwq608kxayx" path="res://assets/ui/vn/illustrations/nuez/nuez scene32.png" id="32_w7fy6"]
+[ext_resource type="Texture2D" uid="uid://gxp4542qdtea" path="res://assets/ui/vn/illustrations/nuez/nuez scene33.png" id="33_ymyf1"]
+[ext_resource type="Texture2D" uid="uid://da0h7ph7bo0vq" path="res://assets/ui/vn/illustrations/nuez/nuez scene34.png" id="34_e8h8t"]
+[ext_resource type="Texture2D" uid="uid://b8k3f72htvhhu" path="res://assets/ui/vn/illustrations/nuez/nuez scene35.png" id="35_dbqfn"]
+[ext_resource type="Texture2D" uid="uid://djdcaotqvxq4j" path="res://assets/ui/vn/illustrations/nuez/nuez scene36.png" id="36_qkk0n"]
+[ext_resource type="Texture2D" uid="uid://mfiy3dacmfbm" path="res://assets/ui/vn/illustrations/nuez/nuez scene37.png" id="37_u3gog"]
+[ext_resource type="Texture2D" uid="uid://dr3yj4fv4q6nq" path="res://assets/ui/vn/illustrations/nuez/nuez scene38.png" id="38_rjmxe"]
+[ext_resource type="Texture2D" uid="uid://bw8nmbrvg4aju" path="res://assets/ui/vn/illustrations/nuez/nuez scene39.png" id="39_tasdu"]
+[ext_resource type="Texture2D" uid="uid://c26m4063aww3a" path="res://assets/ui/vn/illustrations/nuez/nuez scene4.png" id="40_r6krg"]
+[ext_resource type="Texture2D" uid="uid://kkclqreg3yvf" path="res://assets/ui/vn/illustrations/nuez/nuez scene40.png" id="41_go04f"]
+[ext_resource type="Texture2D" uid="uid://8x3v18jp4ocp" path="res://assets/ui/vn/illustrations/nuez/nuez scene41.png" id="42_bqnhb"]
+[ext_resource type="Texture2D" uid="uid://dohnamagyyl8u" path="res://assets/ui/vn/illustrations/nuez/nuez scene42.png" id="43_t2q7a"]
+[ext_resource type="Texture2D" uid="uid://dtgap01pddsk3" path="res://assets/ui/vn/illustrations/nuez/nuez scene42a.png" id="44_gt02d"]
+[ext_resource type="Texture2D" uid="uid://broxkqry5f7ii" path="res://assets/ui/vn/illustrations/nuez/nuez scene43.png" id="45_m8j6g"]
+[ext_resource type="Texture2D" uid="uid://cqsbr77ljywdx" path="res://assets/ui/vn/illustrations/nuez/nuez scene44.png" id="46_s7hco"]
+[ext_resource type="Texture2D" uid="uid://dnjk7augs4hk6" path="res://assets/ui/vn/illustrations/nuez/nuez scene45.png" id="47_lh1g4"]
+[ext_resource type="Texture2D" uid="uid://bhbe1tktbl1lm" path="res://assets/ui/vn/illustrations/nuez/nuez scene46.png" id="48_l5cms"]
+[ext_resource type="Texture2D" uid="uid://qrjcjgg7c0sg" path="res://assets/ui/vn/illustrations/nuez/nuez scene47.png" id="49_hhs46"]
+[ext_resource type="Texture2D" uid="uid://mwod5nwgfnn1" path="res://assets/ui/vn/illustrations/nuez/nuez scene48.png" id="50_o0aio"]
+[ext_resource type="Texture2D" uid="uid://cgmmnbxoj7jv5" path="res://assets/ui/vn/illustrations/nuez/nuez scene49.png" id="51_niw1m"]
+[ext_resource type="Texture2D" uid="uid://bqs31pfwfseyy" path="res://assets/ui/vn/illustrations/nuez/nuez scene5.png" id="52_68dil"]
+[ext_resource type="Texture2D" uid="uid://bbuudl5twxnlr" path="res://assets/ui/vn/illustrations/nuez/nuez scene50.png" id="53_3dsnv"]
+[ext_resource type="Texture2D" uid="uid://c1vc2d5rhnw1v" path="res://assets/ui/vn/illustrations/nuez/nuez scene51.png" id="54_jwubl"]
+[ext_resource type="Texture2D" uid="uid://b74pge6tihn67" path="res://assets/ui/vn/illustrations/nuez/nuez scene52.png" id="55_ibx8r"]
+[ext_resource type="Texture2D" uid="uid://1q5ayufuqcoq" path="res://assets/ui/vn/illustrations/nuez/nuez scene6.png" id="56_w7yqy"]
+[ext_resource type="Texture2D" uid="uid://d4jcaymbtw20" path="res://assets/ui/vn/illustrations/nuez/nuez scene6a.png" id="57_x3p22"]
+[ext_resource type="Texture2D" uid="uid://bd48d5iaeawdk" path="res://assets/ui/vn/illustrations/nuez/nuez scene6b.png" id="58_64028"]
+[ext_resource type="Texture2D" uid="uid://b3c1p8ywhm1xi" path="res://assets/ui/vn/illustrations/nuez/nuez scene7.png" id="59_568wj"]
+[ext_resource type="Texture2D" uid="uid://ba5tf63prc3kk" path="res://assets/ui/vn/illustrations/nuez/nuez scene7a.png" id="60_i44bi"]
+[ext_resource type="Texture2D" uid="uid://boed231top3nm" path="res://assets/ui/vn/illustrations/nuez/nuez scene8.png" id="61_i6cci"]
+[ext_resource type="Texture2D" uid="uid://vk8nuaqq5cow" path="res://assets/ui/vn/illustrations/nuez/nuez scene9.png" id="62_t44mw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n2xjj"]
+atlas = ExtResource("1_rwhfq")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2iidg"]
+atlas = ExtResource("2_7xyvh")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_74263"]
+atlas = ExtResource("3_xpuoy")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_itxr5"]
+atlas = ExtResource("4_cbw1a")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ad7bl"]
+atlas = ExtResource("5_m4sam")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mbk22"]
+atlas = ExtResource("6_qxs6c")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3qnai"]
+atlas = ExtResource("7_6e4y4")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8w3m0"]
+atlas = ExtResource("8_e5cle")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q246d"]
+atlas = ExtResource("9_eb5ay")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y6uq3"]
+atlas = ExtResource("10_ff251")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_08rgw"]
+atlas = ExtResource("11_ykm0q")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4v6a2"]
+atlas = ExtResource("12_masxf")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y1qw4"]
+atlas = ExtResource("13_4krpa")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g41af"]
+atlas = ExtResource("14_4bpph")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h13ut"]
+atlas = ExtResource("15_px1td")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0b53y"]
+atlas = ExtResource("16_urnn6")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h8ohm"]
+atlas = ExtResource("17_rfsa5")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wi3uf"]
+atlas = ExtResource("18_mbx45")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_extpq"]
+atlas = ExtResource("19_nrksx")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qyvii"]
+atlas = ExtResource("20_ljlj5")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iokyy"]
+atlas = ExtResource("21_l8vfb")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_78ib2"]
+atlas = ExtResource("22_4knrl")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s3y2x"]
+atlas = ExtResource("23_e3k6f")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x0v15"]
+atlas = ExtResource("24_3bbv4")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nenpc"]
+atlas = ExtResource("25_eeojs")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bnsiw"]
+atlas = ExtResource("26_hi7ai")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n04s7"]
+atlas = ExtResource("27_g0nv3")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hv6aa"]
+atlas = ExtResource("28_mchv7")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1t31e"]
+atlas = ExtResource("29_i74dj")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xk1vo"]
+atlas = ExtResource("30_hkrnv")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1guiq"]
+atlas = ExtResource("31_geur4")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l12td"]
+atlas = ExtResource("32_w7fy6")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3bqle"]
+atlas = ExtResource("33_ymyf1")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c4k5i"]
+atlas = ExtResource("34_e8h8t")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6fwcq"]
+atlas = ExtResource("35_dbqfn")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rt4ya"]
+atlas = ExtResource("36_qkk0n")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_enacg"]
+atlas = ExtResource("37_u3gog")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_in605"]
+atlas = ExtResource("38_rjmxe")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3u5m2"]
+atlas = ExtResource("39_tasdu")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ndtw"]
+atlas = ExtResource("40_r6krg")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h5aqo"]
+atlas = ExtResource("41_go04f")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kfdep"]
+atlas = ExtResource("42_bqnhb")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_45ruj"]
+atlas = ExtResource("43_t2q7a")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wjx2g"]
+atlas = ExtResource("44_gt02d")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tv3m7"]
+atlas = ExtResource("45_m8j6g")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s2jpf"]
+atlas = ExtResource("46_s7hco")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ye4p7"]
+atlas = ExtResource("47_lh1g4")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ti2ut"]
+atlas = ExtResource("48_l5cms")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3b1ao"]
+atlas = ExtResource("49_hhs46")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eklfs"]
+atlas = ExtResource("50_o0aio")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_akue8"]
+atlas = ExtResource("51_niw1m")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uqaog"]
+atlas = ExtResource("52_68dil")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5310k"]
+atlas = ExtResource("53_3dsnv")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2hctb"]
+atlas = ExtResource("54_jwubl")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wp7d8"]
+atlas = ExtResource("55_ibx8r")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qpm7v"]
+atlas = ExtResource("56_w7yqy")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mxi5u"]
+atlas = ExtResource("57_x3p22")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tm4y2"]
+atlas = ExtResource("58_64028")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x2yob"]
+atlas = ExtResource("59_568wj")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gnwqe"]
+atlas = ExtResource("60_i44bi")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ml14a"]
+atlas = ExtResource("61_i6cci")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ckfh8"]
+atlas = ExtResource("62_t44mw")
+region = Rect2(0, 0, 2560, 1440)
+
+[resource]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n2xjj")
+}],
+"loop": true,
+"name": &"nuez_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2iidg")
+}],
+"loop": true,
+"name": &"nuez_10",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_74263")
+}],
+"loop": true,
+"name": &"nuez_11",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_itxr5")
+}],
+"loop": true,
+"name": &"nuez_11a",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ad7bl")
+}],
+"loop": true,
+"name": &"nuez_11b",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mbk22")
+}],
+"loop": true,
+"name": &"nuez_12",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3qnai")
+}],
+"loop": true,
+"name": &"nuez_13",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8w3m0")
+}],
+"loop": true,
+"name": &"nuez_14",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q246d")
+}],
+"loop": true,
+"name": &"nuez_15",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y6uq3")
+}],
+"loop": true,
+"name": &"nuez_16",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_08rgw")
+}],
+"loop": true,
+"name": &"nuez_16a",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4v6a2")
+}],
+"loop": true,
+"name": &"nuez_17",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y1qw4")
+}],
+"loop": true,
+"name": &"nuez_17b",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g41af")
+}],
+"loop": true,
+"name": &"nuez_18",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h13ut")
+}],
+"loop": true,
+"name": &"nuez_18a",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0b53y")
+}],
+"loop": true,
+"name": &"nuez_19",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h8ohm")
+}],
+"loop": true,
+"name": &"nuez_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wi3uf")
+}],
+"loop": true,
+"name": &"nuez_20",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_extpq")
+}],
+"loop": true,
+"name": &"nuez_21",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qyvii")
+}],
+"loop": true,
+"name": &"nuez_22",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iokyy")
+}],
+"loop": true,
+"name": &"nuez_23",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_78ib2")
+}],
+"loop": true,
+"name": &"nuez_24",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s3y2x")
+}],
+"loop": true,
+"name": &"nuez_25",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x0v15")
+}],
+"loop": true,
+"name": &"nuez_26",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nenpc")
+}],
+"loop": true,
+"name": &"nuez_26a",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bnsiw")
+}],
+"loop": true,
+"name": &"nuez_27",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n04s7")
+}],
+"loop": true,
+"name": &"nuez_28",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hv6aa")
+}],
+"loop": true,
+"name": &"nuez_29",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1t31e")
+}],
+"loop": true,
+"name": &"nuez_3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xk1vo")
+}],
+"loop": true,
+"name": &"nuez_30",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1guiq")
+}],
+"loop": true,
+"name": &"nuez_31",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l12td")
+}],
+"loop": true,
+"name": &"nuez_32",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3bqle")
+}],
+"loop": true,
+"name": &"nuez_33",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c4k5i")
+}],
+"loop": true,
+"name": &"nuez_34",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6fwcq")
+}],
+"loop": true,
+"name": &"nuez_35",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rt4ya")
+}],
+"loop": true,
+"name": &"nuez_36",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_enacg")
+}],
+"loop": true,
+"name": &"nuez_37",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_in605")
+}],
+"loop": true,
+"name": &"nuez_38",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3u5m2")
+}],
+"loop": true,
+"name": &"nuez_39",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ndtw")
+}],
+"loop": true,
+"name": &"nuez_4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h5aqo")
+}],
+"loop": true,
+"name": &"nuez_40",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kfdep")
+}],
+"loop": true,
+"name": &"nuez_41",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_45ruj")
+}],
+"loop": true,
+"name": &"nuez_42",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wjx2g")
+}],
+"loop": true,
+"name": &"nuez_42a",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tv3m7")
+}],
+"loop": true,
+"name": &"nuez_43",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s2jpf")
+}],
+"loop": true,
+"name": &"nuez_44",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ye4p7")
+}],
+"loop": true,
+"name": &"nuez_45",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ti2ut")
+}],
+"loop": true,
+"name": &"nuez_46",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3b1ao")
+}],
+"loop": true,
+"name": &"nuez_47",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eklfs")
+}],
+"loop": true,
+"name": &"nuez_48",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_akue8")
+}],
+"loop": true,
+"name": &"nuez_49",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uqaog")
+}],
+"loop": true,
+"name": &"nuez_5",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5310k")
+}],
+"loop": true,
+"name": &"nuez_50",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2hctb")
+}],
+"loop": true,
+"name": &"nuez_51",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wp7d8")
+}],
+"loop": true,
+"name": &"nuez_52",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qpm7v")
+}],
+"loop": true,
+"name": &"nuez_6",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mxi5u")
+}],
+"loop": true,
+"name": &"nuez_6a",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tm4y2")
+}],
+"loop": true,
+"name": &"nuez_6b",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x2yob")
+}],
+"loop": true,
+"name": &"nuez_7",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gnwqe")
+}],
+"loop": true,
+"name": &"nuez_7a",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ml14a")
+}],
+"loop": true,
+"name": &"nuez_8",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ckfh8")
+}],
+"loop": true,
+"name": &"nuez_9",
+"speed": 5.0
+}]

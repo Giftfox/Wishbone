@@ -1,0 +1,64 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://bvn54dyin613n"]
+
+[ext_resource type="Texture2D" uid="uid://cmijtxw6aqoqh" path="res://assets/entities/individuals/altharnaki.png" id="1_wrdl6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xiqhj"]
+atlas = ExtResource("1_wrdl6")
+region = Rect2(0, 0, 64, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0gn4u"]
+atlas = ExtResource("1_wrdl6")
+region = Rect2(64, 0, 64, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ro4nt"]
+atlas = ExtResource("1_wrdl6")
+region = Rect2(128, 0, 64, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d04h8"]
+atlas = ExtResource("1_wrdl6")
+region = Rect2(192, 0, 64, 80)
+
+[resource]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"idle_left",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xiqhj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0gn4u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ro4nt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d04h8")
+}],
+"loop": true,
+"name": &"idle_right",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"jump_left",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"jump_right",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"walk_left",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"walk_right",
+"speed": 10.0
+}]

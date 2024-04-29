@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://h660pns6okkq"]
+
+[ext_resource type="Shader" uid="uid://c0efriqk4b0wu" path="res://assets/shaders/multiply.tres" id="1_hke66"]
+
+[resource]
+shader = ExtResource("1_hke66")
+shader_parameter/color = null

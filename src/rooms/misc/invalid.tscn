@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbt6j5ltw3rbo"]
+
+[ext_resource type="PackedScene" uid="uid://dmtpsacm6elog" path="res://src/rooms/RoomControl.tscn" id="2_3cejd"]
+[ext_resource type="Texture2D" uid="uid://ci4ucnk4vskim" path="res://assets/environments/invalidroom.png" id="2_4y7lq"]
+
+[node name="InvalidRoom" type="Node2D"]
+
+[node name="RoomControl" parent="." instance=ExtResource("2_3cejd")]
+has_player = false
+uses_camera = false
+scene_path = "misc/invalid"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_4y7lq")
+centered = false

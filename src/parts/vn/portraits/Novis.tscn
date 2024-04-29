@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddkrw6j554aki"]
+
+[ext_resource type="PackedScene" uid="uid://c4q7v3kg6nr1t" path="res://src/parts/vn/VNPortrait.tscn" id="1"]
+[ext_resource type="Texture2D" uid="uid://dy0nn24kcoofe" path="res://assets/ui/vn/portraits/novis/portrait_tests.png" id="2_v2b3u"]
+
+[node name="VNPortrait" instance=ExtResource("1")]
+
+[node name="Portrait" parent="." index="0"]
+texture = ExtResource("2_v2b3u")
+
+[node name="Speaking" parent="Portrait/Variants" index="0"]
+position = Vector2(184, 656)
+scale = Vector2(2, 2)
+
+[node name="Blink" parent="Portrait/Variants" index="1"]
+position = Vector2(488, 656)
+scale = Vector2(2, 2)
+
+[node name="Nametag" parent="Portrait" index="1"]
+animation = &"novis"

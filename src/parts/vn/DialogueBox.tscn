@@ -1,0 +1,76 @@
+[gd_scene load_steps=8 format=3 uid="uid://dwdhp7jmjfpwv"]
+
+[ext_resource type="Texture2D" uid="uid://h6k4uqeswh1q" path="res://assets/ui/vn/dialoguebox_frame.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://mf3apiwt04km" path="res://assets/ui/vn/dialoguebox_fill.png" id="3"]
+[ext_resource type="FontFile" path="res://assets/fonts/DialogueFont.tres" id="3_bmms0"]
+[ext_resource type="Script" path="res://src/parts/vn/DialogueBox.gd" id="4"]
+[ext_resource type="Texture2D" uid="uid://cehp3e8whaeql" path="res://assets/ui/vn/dialogue_anims/andre_stop.png" id="5"]
+
+[sub_resource type="AtlasTexture" id="4"]
+atlas = ExtResource("5")
+region = Rect2(0, 0, 143, 75)
+
+[sub_resource type="SpriteFrames" id="5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("4")
+}],
+"loop": true,
+"name": &"andre_stop",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="DialogueBox" type="Node2D" groups=["vn_dialogue"]]
+modulate = Color(1, 1, 1, 0)
+z_index = 50
+script = ExtResource("4")
+
+[node name="Fill" type="Sprite2D" parent="."]
+position = Vector2(0, -176)
+scale = Vector2(4, 4)
+centered = false
+offset = Vector2(0, -85)
+
+[node name="Frame" type="Sprite2D" parent="Fill"]
+texture = ExtResource("3")
+offset = Vector2(0, -85)
+
+[node name="FrameReal" type="Sprite2D" parent="Fill/Frame"]
+self_modulate = Color(0, 0, 0, 1)
+texture = ExtResource("1")
+offset = Vector2(0, -85)
+
+[node name="Label" type="Label" parent="Fill"]
+modulate = Color(0, 0, 0, 1)
+offset_left = -80.0
+offset_top = -137.0
+offset_right = 77.0
+offset_bottom = -29.0
+pivot_offset = Vector2(87.5, 62.5)
+theme_override_fonts/font = ExtResource("3_bmms0")
+text = "asdfasdf
+asdgbnzsdgfASDFSDG"
+autowrap_mode = 2
+
+[node name="Animation" type="AnimatedSprite2D" parent="Fill"]
+position = Vector2(149, -15)
+sprite_frames = SubResource("5")
+
+[node name="InputBuffer" type="Timer" parent="."]
+process_callback = 0
+wait_time = 0.25
+one_shot = true
+autostart = true
+
+[node name="TextAdvance" type="Timer" parent="."]
+process_callback = 0
+wait_time = 0.05
+autostart = true
+
+[connection signal="timeout" from="TextAdvance" to="." method="_on_text_advance_timeout"]

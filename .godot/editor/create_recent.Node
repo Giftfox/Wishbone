@@ -1,0 +1,17 @@
+Label
+AnimatedSprite2D
+Sprite2D
+Timer
+CPUParticles2D
+Node2D
+PointLight2D
+ColorRect
+Area2D
+AnimationPlayer
+TileMap
+CollisionShape2D
+StaticBody2D
+CharacterBody2D
+Control
+CanvasLayer
+Line2D

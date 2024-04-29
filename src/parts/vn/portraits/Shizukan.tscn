@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=3 uid="uid://dxavfg2fpt3ib"]
+
+[ext_resource type="PackedScene" uid="uid://c4q7v3kg6nr1t" path="res://src/parts/vn/VNPortrait.tscn" id="1_2m310"]
+[ext_resource type="Texture2D" uid="uid://ca371me8q581t" path="res://assets/ui/vn/portraits/shizukan/shizukan_portrait.png" id="2_khc5l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6q3dc"]
+atlas = ExtResource("2_khc5l")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c2j6o"]
+atlas = ExtResource("2_khc5l")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_84ylb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6q3dc")
+}],
+"loop": true,
+"name": &"annoyed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c2j6o")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="VNPortrait" instance=ExtResource("1_2m310")]
+
+[node name="AnimPortrait" type="AnimatedSprite2D" parent="." index="0"]
+position = Vector2(288, 1152)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_84ylb")
+
+[node name="Annoyed" type="AnimatedSprite2D" parent="Portrait/Variants" index="0"]
+visible = false
+position = Vector2(288, 1152)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_84ylb")
+animation = &"annoyed"
+
+[node name="Speaking" parent="Portrait/Variants" index="1"]
+visible = false
+animation = &"blink"
+anim_when_speaking = ""
+
+[node name="Blink" parent="Portrait/Variants" index="2"]
+visible = false
+anim_when_not_speaking = ""

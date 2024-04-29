@@ -1,0 +1,39 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://ba786484i8jhu"]
+
+[ext_resource type="Texture2D" uid="uid://bea363ihs8smv" path="res://assets/entities/individuals/altharthornbird.png" id="1_o6dq4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i5qjg"]
+atlas = ExtResource("1_o6dq4")
+region = Rect2(0, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_58c4c"]
+atlas = ExtResource("1_o6dq4")
+region = Rect2(80, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0kq5j"]
+atlas = ExtResource("1_o6dq4")
+region = Rect2(160, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nk3e8"]
+atlas = ExtResource("1_o6dq4")
+region = Rect2(240, 0, 80, 80)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i5qjg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_58c4c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0kq5j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nk3e8")
+}],
+"loop": true,
+"name": &"idle_right",
+"speed": 10.0
+}]

@@ -1,0 +1,63 @@
+[gd_scene load_steps=4 format=3 uid="uid://dp2llxm27fv5n"]
+
+[ext_resource type="Texture2D" uid="uid://ddkbr2v153ybv" path="res://assets/ui/icons/gamepad_small.png" id="2"]
+[ext_resource type="Script" path="res://src/parts/HUDInputLabel.gd" id="3"]
+[ext_resource type="FontVariation" uid="uid://dah6hd1bjc1ge" path="res://assets/fonts/Small_Variation.tres" id="3_tmgom"]
+
+[node name="Button" type="Sprite2D"]
+texture = ExtResource("2")
+hframes = 16
+vframes = 4
+script = ExtResource("3")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -20.0
+offset_top = -15.0
+offset_right = 20.0
+offset_bottom = 5.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_tmgom")
+text = "[Esc]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Front2" type="Label" parent="Label"]
+offset_top = -2.0
+offset_right = 40.0
+offset_bottom = 18.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_tmgom")
+text = "[Esc]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Front3" type="Label" parent="Label"]
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 39.0
+offset_bottom = 19.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_tmgom")
+text = "[Esc]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Front4" type="Label" parent="Label"]
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 41.0
+offset_bottom = 19.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_tmgom")
+text = "[Esc]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Front" type="Label" parent="Label"]
+offset_top = -1.0
+offset_right = 40.0
+offset_bottom = 19.0
+theme_override_fonts/font = ExtResource("3_tmgom")
+text = "[Esc]"
+horizontal_alignment = 1
+vertical_alignment = 1

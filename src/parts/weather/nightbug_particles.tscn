@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnqcj3bhdclkq"]
+
+[ext_resource type="Texture2D" uid="uid://c4dh7cjtrdu3o" path="res://assets/effects/nightbug.png" id="1_ounlu"]
+
+[sub_resource type="Gradient" id="Gradient_xp3w2"]
+offsets = PackedFloat32Array(0, 0.375, 0.65625, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[node name="Particles" type="CPUParticles2D"]
+modulate = Color(0.235294, 1, 0.835294, 1)
+light_mask = 0
+amount = 32
+lifetime = 4.0
+randomness = 0.25
+local_coords = true
+texture = ExtResource("1_ounlu")
+emission_shape = 3
+emission_rect_extents = Vector2(640, 360)
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 2.0
+initial_velocity_max = 10.0
+scale_amount_min = 0.3
+scale_amount_max = 0.5
+color_ramp = SubResource("Gradient_xp3w2")

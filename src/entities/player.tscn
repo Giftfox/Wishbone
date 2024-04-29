@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://u40u2roi0pjx"]
+
+[ext_resource type="PackedScene" uid="uid://btc07f1lte0ms" path="res://src/entities/entity.tscn" id="1_qte0d"]
+[ext_resource type="Script" path="res://src/entities/player/player_controls.gd" id="2_yvwne"]
+[ext_resource type="SpriteFrames" uid="uid://bdxdpo6868gjn" path="res://src/entities/individuals/frames/nyaofa.tres" id="3_byoru"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d4c2q"]
+size = Vector2(14, 19)
+
+[node name="Player" groups=["player"] instance=ExtResource("1_qte0d")]
+z_index = 51
+collision_layer = 12
+character = 20
+
+[node name="PlayerControls" type="Node2D" parent="." index="1"]
+script = ExtResource("2_yvwne")
+
+[node name="Anims" parent="Visuals" index="0"]
+position = Vector2(0, -16)
+sprite_frames = ExtResource("3_byoru")
+
+[node name="Coll" parent="." index="3"]
+position = Vector2(0, -9.5)
+shape = SubResource("RectangleShape2D_d4c2q")
+
+[node name="Camera" parent="." index="5"]
+focus = true

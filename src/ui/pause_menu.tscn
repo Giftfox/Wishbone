@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=3 uid="uid://8bbri12nttkb"]
+
+[ext_resource type="Script" path="res://src/ui/dropdown_menu.gd" id="1_u8ac5"]
+[ext_resource type="Script" path="res://src/ui/dropdown_settings.gd" id="2_xv2ae"]
+[ext_resource type="PackedScene" uid="uid://daao0nrsyylem" path="res://src/ui/rectangle_visual.tscn" id="3_gcmiw"]
+[ext_resource type="Script" path="res://src/ui/dropdown_items.gd" id="4_y1qd2"]
+
+[node name="PauseMenu" type="Node2D"]
+script = ExtResource("1_u8ac5")
+open_input = "menu_toggle"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_left = -30.0
+offset_right = 2671.0
+offset_bottom = 240.0
+color = Color(0, 0, 0, 1)
+
+[node name="TabRect" parent="." instance=ExtResource("3_gcmiw")]
+size = Vector2(400, 1300)
+fill_color = Color(0.564706, 0.298039, 0.517647, 0.705882)
+thickness = 2
+
+[node name="Selector" parent="TabRect" instance=ExtResource("3_gcmiw")]
+position = Vector2(6, 6)
+size = Vector2(388, 100)
+thickness = 2
+
+[node name="Menus" type="Node2D" parent="."]
+show_behind_parent = true
+
+[node name="Settings" type="Node2D" parent="Menus"]
+visible = false
+script = ExtResource("2_xv2ae")
+
+[node name="ContentRect" parent="Menus/Settings" instance=ExtResource("3_gcmiw")]
+size = Vector2(693, 580)
+fill_color = Color(0.564706, 0.298039, 0.517647, 0.705882)
+thickness = 2
+
+[node name="Items" type="Node2D" parent="Menus"]
+visible = false
+script = ExtResource("4_y1qd2")
+
+[node name="ContentRect" parent="Menus/Items" instance=ExtResource("3_gcmiw")]
+size = Vector2(693, 580)
+fill_color = Color(0.564706, 0.298039, 0.517647, 0.705882)
+thickness = 2
+
+[node name="Selector" parent="Menus/Items/ContentRect" instance=ExtResource("3_gcmiw")]
+position = Vector2(819.623, -24.9205)
+size = Vector2(200, 200)
+thickness = 2

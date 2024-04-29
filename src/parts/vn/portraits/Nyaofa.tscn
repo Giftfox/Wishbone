@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://dh7ol8rbaq0di"]
+
+[ext_resource type="PackedScene" uid="uid://c4q7v3kg6nr1t" path="res://src/parts/vn/VNPortrait.tscn" id="1_6dvs7"]
+[ext_resource type="SpriteFrames" uid="uid://bq5du2n50s5bo" path="res://src/parts/vn/portraits/nyaofa_frames.tres" id="2_41jj4"]
+
+[node name="VNPortrait" instance=ExtResource("1_6dvs7")]
+
+[node name="AnimPortrait" type="AnimatedSprite2D" parent="." index="0"]
+visible = false
+position = Vector2(288, 1152)
+scale = Vector2(6, 6)
+sprite_frames = ExtResource("2_41jj4")
+autoplay = "default"
+
+[node name="Speaking" parent="Portrait/Variants" index="0"]
+visible = false
+z_index = 1
+position = Vector2(288, 1152)
+scale = Vector2(6, 6)
+sprite_frames = ExtResource("2_41jj4")
+animation = &"talky"
+autoplay = "talky"
+randomize_frames = false
+anim_when_speaking = "talky"
+
+[node name="Blink" parent="Portrait/Variants" index="1"]
+visible = false
+position = Vector2(288, 1152)
+scale = Vector2(6, 6)
+sprite_frames = ExtResource("2_41jj4")
+animation = &"default"
+autoplay = "default"
+frame_progress = 0.0
+blink_frames = false
+anim_when_not_speaking = "default"

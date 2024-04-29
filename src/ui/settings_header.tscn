@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0axomwe2hbpt"]
+
+[ext_resource type="PackedScene" uid="uid://daao0nrsyylem" path="res://src/ui/rectangle_visual.tscn" id="2_3bviv"]
+
+[node name="SettingsHeader" type="Label"]
+show_behind_parent = true
+offset_top = -90.0
+offset_right = 1400.0
+offset_bottom = -11.0
+theme_override_font_sizes/font_size = 96
+text = "asdf"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Rectangle" parent="." instance=ExtResource("2_3bviv")]
+show_behind_parent = true
+position = Vector2(0, 9)
+size = Vector2(1400, 79)
+fill_color = Color(0.447059, 0.14902, 0.392157, 0.705882)
+thickness = 2
+
+[node name="Rectangle2" parent="." instance=ExtResource("2_3bviv")]
+show_behind_parent = true
+z_index = 1
+position = Vector2(0, 9)
+size = Vector2(1400, 79)
+thickness = 2

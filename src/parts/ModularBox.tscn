@@ -1,0 +1,79 @@
+[gd_scene load_steps=11 format=3 uid="uid://b7ovt0s0r45pg"]
+
+[ext_resource type="Script" path="res://src/parts/ModularBox.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://bb36sb8jk4buu" path="res://assets/ui/box/corner_ul.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://rfvan183hgai" path="res://assets/ui/box/edge_l.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://bixvlxxgole8m" path="res://assets/ui/box/corner_dr.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://bwalfb11owh88" path="res://assets/ui/box/corner_dl.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://ctohcdlafut71" path="res://assets/ui/box/corner_ur.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://djp5mle166ekl" path="res://assets/ui/box/middle.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://dpw7vlid0s03w" path="res://assets/ui/box/edge_r.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://ddx2o6oa1qubs" path="res://assets/ui/box/edge_d.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://diqnwg5rowtvg" path="res://assets/ui/box/edge_u.png" id="10"]
+
+[node name="ModularBox" type="Node2D"]
+script = ExtResource("1")
+size = Vector2(624, 140)
+
+[node name="CornerUL" type="Sprite2D" parent="."]
+z_index = -1
+texture = ExtResource("2")
+centered = false
+
+[node name="CornerUR" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(11, 0)
+texture = ExtResource("6")
+centered = false
+
+[node name="CornerDL" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(0, 11)
+texture = ExtResource("5")
+centered = false
+
+[node name="CornerDR" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(11, 11)
+texture = ExtResource("4")
+centered = false
+
+[node name="EdgeL" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(0, 10)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 10, 1)
+
+[node name="EdgeR" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(11, 10)
+texture = ExtResource("8")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 10, 1)
+
+[node name="EdgeU" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(10, 0)
+texture = ExtResource("10")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 1, 10)
+
+[node name="EdgeD" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(10, 11)
+texture = ExtResource("9")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 1, 10)
+
+[node name="Middle" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(10, 10)
+texture = ExtResource("7")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 1, 1)

@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://5pwlg4gw4gl6"]
+
+[ext_resource type="PackedScene" uid="uid://daao0nrsyylem" path="res://src/ui/rectangle_visual.tscn" id="1_tsm6r"]
+[ext_resource type="FontFile" uid="uid://mi24hkcfihxa" path="res://assets/fonts/Small.tres" id="2_hgt6w"]
+
+[node name="DialogueChoice" type="Node2D" groups=["dialogue_choice"]]
+
+[node name="Rectangle" parent="." instance=ExtResource("1_tsm6r")]
+size = Vector2(800, 200)
+fill_color = Color(0, 0, 0, 0.501961)
+thickness = 4
+horizontal_centered = true
+vertical_centered = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = -298.0
+offset_top = -98.0
+offset_right = 298.0
+offset_bottom = 98.0
+theme_override_fonts/font = ExtResource("2_hgt6w")
+theme_override_font_sizes/font_size = 64
+text = "asdfasdfasdfasdf asdfasdfasdf"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Selector" parent="." instance=ExtResource("1_tsm6r")]
+size = Vector2(816, 216)
+thickness = 4
+horizontal_centered = true
+vertical_centered = true
+
+[node name="Rectangle2" parent="Selector" instance=ExtResource("1_tsm6r")]
+show_behind_parent = true
+size = Vector2(804, 204)
+color = Color(0, 0, 0, 1)
+thickness = 12
+horizontal_centered = true
+vertical_centered = true
+
+[node name="Rectangle3" parent="Selector" instance=ExtResource("1_tsm6r")]
+size = Vector2(792, 192)
+thickness = 4
+horizontal_centered = true
+vertical_centered = true

@@ -1,0 +1,221 @@
+[gd_scene load_steps=24 format=3 uid="uid://c4q7v3kg6nr1t"]
+
+[ext_resource type="PackedScene" uid="uid://dqcum8t0hlh48" path="res://src/parts/vn/portrait_animated_variant.tscn" id="2_daodh"]
+[ext_resource type="Texture2D" uid="uid://dwqboa4kavo4l" path="res://assets/ui/vn/portraits/novis/portrait_tests2.png" id="3_qgrwx"]
+[ext_resource type="Texture2D" uid="uid://bgwkr36wjw5o7" path="res://assets/ui/vn/speech_test.png" id="3_umc0o"]
+[ext_resource type="Script" path="res://src/parts/vn/VNPortrait.gd" id="4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tjho8"]
+atlas = ExtResource("3_umc0o")
+region = Rect2(0, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ign3f"]
+atlas = ExtResource("3_umc0o")
+region = Rect2(100, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tv1cs"]
+atlas = ExtResource("3_umc0o")
+region = Rect2(200, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u4cgk"]
+atlas = ExtResource("3_umc0o")
+region = Rect2(300, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xq74a"]
+atlas = ExtResource("3_umc0o")
+region = Rect2(400, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fg2yq"]
+atlas = ExtResource("3_umc0o")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jn2aq"]
+atlas = ExtResource("3_umc0o")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ne5fb"]
+atlas = ExtResource("3_umc0o")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_671mo"]
+atlas = ExtResource("3_umc0o")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nao8b"]
+atlas = ExtResource("3_umc0o")
+region = Rect2(400, 0, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_as6my"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tjho8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ign3f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tv1cs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u4cgk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xq74a")
+}],
+"loop": true,
+"name": &"blink",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fg2yq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jn2aq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ne5fb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_671mo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nao8b")
+}],
+"loop": true,
+"name": &"speaking",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pclw8"]
+atlas = ExtResource("3_qgrwx")
+region = Rect2(0, 0, 2560, 1440)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0pqvx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pclw8")
+}],
+"loop": true,
+"name": &"novis",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="2"]
+resource_name = "flip"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(-1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p5hum"]
+_data = {
+"RESET": SubResource("1"),
+"flip": SubResource("2")
+}
+
+[sub_resource type="Animation" id="Animation_rmksu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:distance_to_new_pos")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_kw2bi"]
+resource_name = "moving"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:distance_to_new_pos")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e2hjj"]
+_data = {
+"RESET": SubResource("Animation_rmksu"),
+"moving": SubResource("Animation_kw2bi")
+}
+
+[node name="VNPortrait" type="Node2D" groups=["vn_portrait"]]
+script = ExtResource("4")
+
+[node name="Portrait" type="Sprite2D" parent="."]
+centered = false
+
+[node name="Variants" type="Node2D" parent="Portrait"]
+
+[node name="Speaking" parent="Portrait/Variants" instance=ExtResource("2_daodh")]
+sprite_frames = SubResource("SpriteFrames_as6my")
+animation = &"speaking"
+anim_when_speaking = "speaking"
+
+[node name="Blink" parent="Portrait/Variants" instance=ExtResource("2_daodh")]
+sprite_frames = SubResource("SpriteFrames_as6my")
+animation = &"blink"
+frame_progress = 0.468267
+randomize_frames = false
+blink_frames = true
+anim_when_not_speaking = "blink"
+
+[node name="Nametag" type="AnimatedSprite2D" parent="Portrait"]
+sprite_frames = SubResource("SpriteFrames_0pqvx")
+centered = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_p5hum")
+}
+
+[node name="MovingAnimator" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_e2hjj")
+}

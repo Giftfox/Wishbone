@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cegxojqa78mkv"]
+
+[ext_resource type="Script" path="res://src/ui/dropdown_settings.gd" id="1_3bvvu"]
+[ext_resource type="PackedScene" uid="uid://daao0nrsyylem" path="res://src/ui/rectangle_visual.tscn" id="2_owgdm"]
+
+[node name="Settings" type="Node2D"]
+position = Vector2(20, 140)
+script = ExtResource("1_3bvvu")
+
+[node name="Rectangle" parent="." instance=ExtResource("2_owgdm")]
+position = Vector2(0, 69)
+size = Vector2(1400, 580)
+fill_color = Color(0, 0, 0, 0.705882)
+thickness = 3
+
+[node name="Rectangle2" parent="Rectangle" instance=ExtResource("2_owgdm")]
+visible = false
+size = Vector2(693, 580)
+thickness = 3
